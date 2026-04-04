@@ -9,9 +9,9 @@
     
     <!-- Chosen Palette: Clean Minimalist (White #FFFFFF, Deep Black #111827, Aviation Navy #1B263B, Safety Orange #F4A261) -->
     <!-- Application Structure Plan: Finalized "Command Center" (home.gsacharya.com). 
-         1. Hero: Showcases the latest fortnightly curation (3+1 format).
+         1. Hero: Showcases the latest fortnightly curation.
          2. Analytical Log: Streamlined reverse-chronological feed of past safety briefings.
-         3. Security: Anti-spam contact portal (no exposed email).
+         3. Security: Anti-spam contact portal with "Copy to Clipboard" functionality.
          4. Footer: Centrally aligned professional copyright and ecosystem navigation. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
@@ -49,7 +49,7 @@
 
     <!-- NAVIGATION -->
     <nav class="py-6 px-8 flex justify-between items-center border-b border-gray-100 sticky top-0 bg-white bg-opacity-95 backdrop-blur-sm z-50">
-        <div class="flex items-center gap-2 font-bold text-navy tracking-tight">
+        <div class="flex items-center gap-2 font-bold text-navy tracking-tight cursor-default">
             <span>🛡️</span> The Safety Layer
         </div>
         <div class="hidden md:flex items-center gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
@@ -66,7 +66,7 @@
             <span class="text-3xl">✈️</span>
         </div>
         <h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter mb-4 text-dark italic">The Safety Layer</h1>
-        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-8 text-dark text-balance">Understanding Aviation Safety Before Failure</h2>
+        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-8 text-dark text-balance uppercase">Understanding Aviation Safety Before Failure</h2>
         <p class="text-lg md:text-xl text-gray-500 font-medium max-w-2xl mx-auto leading-relaxed mb-10">
             Examining weak signals, human factors, and system design before incidents become reports.
         </p>
@@ -74,7 +74,7 @@
         <!-- FEATURED BLOCK (LATEST EDITION) -->
         <div class="bg-ice border border-gray-100 rounded-3xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 max-w-4xl mx-auto shadow-sm">
             <div class="text-left">
-                <span class="text-[9px] font-extrabold text-safety uppercase tracking-[0.3em] block mb-2">Latest Curation</span>
+                <span class="text-[9px] font-extrabold text-safety uppercase tracking-[0.3em] block mb-2">Latest Fortnightly Curation</span>
                 <h3 id="hero-title" class="text-2xl font-bold text-navy mb-2"></h3>
                 <p id="hero-summary" class="text-sm text-gray-500 font-serif italic"></p>
             </div>
@@ -93,14 +93,14 @@
                         <span class="w-8 h-[1px] bg-gray-200"></span> Analytical Log Archive
                     </h3>
                     <div id="archive-list" class="space-y-4 max-h-[70vh] overflow-y-auto pr-2">
-                        <!-- JS Populated -->
+                        <!-- JS Populated via articleArchive -->
                     </div>
                 </div>
             </aside>
 
             <!-- RIGHT: THE CONTENT ENGINE -->
             <div class="lg:col-span-8 order-1 lg:order-2">
-                <div id="content-area" class="bg-white rounded-[2rem] border border-gray-100 shadow-2xl p-8 md:p-12">
+                <div id="content-area" class="bg-white rounded-[2rem] border border-gray-100 shadow-2xl p-8 md:p-12 min-h-[500px]">
                     
                     <div class="flex flex-col md:flex-row justify-between items-start gap-4 mb-10">
                         <div>
@@ -147,7 +147,7 @@
                             </div>
                         </div>
                         <a id="view-link" href="#" target="_blank" class="bg-dark text-white px-10 py-4 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-safety hover:text-navy transition-all shadow-xl">
-                            Read Full Article at Beehiiv
+                            Read Full Edition at Beehiiv
                         </a>
                     </div>
                 </div>
@@ -192,7 +192,7 @@
                 <nav class="flex flex-col gap-5 text-sm font-medium text-gray-400">
                     <a href="https://kb.gsacharya.com" target="_blank" class="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2"><span>📂</span> Knowledge Base</a>
                     <a href="https://saas.gsacharya.com" target="_blank" class="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2"><span>💻</span> SaaS Solutions</a>
-                    <a href="https://subscribe.gsacharya.com" target="_blank" class="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2"><span>📩</span> Newsletter</a>
+                    <a href="https://subscribe.gsacharya.com" target="_blank" class="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2"><span>📩</span> Newsletter Subscription</a>
                 </nav>
             </div>
 
@@ -204,7 +204,7 @@
             </div>
         </div>
         <div class="container mx-auto max-w-6xl pt-8 border-t border-white border-opacity-5 text-[10px] font-bold text-gray-600 uppercase tracking-[0.2em] text-center">
-            <p>&copy; 2026 G.S. Acharya | ALL RIGHTS RESERVED</p>
+            <p>&copy; 2026 G.S. ACHARYA | ALL RIGHTS RESERVED</p>
         </div>
     </footer>
 
