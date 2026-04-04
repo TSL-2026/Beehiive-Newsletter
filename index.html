@@ -9,10 +9,10 @@
     
     <!-- Chosen Palette: Clean Minimalist (White #FFFFFF, Deep Black #111827, Aviation Navy #1B263B, Safety Orange #F4A261) -->
     <!-- Application Structure Plan: Finalized "Command Center" (home.gsacharya.com). 
-         1. Hero: Showcases the latest fortnightly curation.
+         1. Hero: Showcases the latest fortnightly curation (3+1 format).
          2. Analytical Log: Streamlined reverse-chronological feed of past safety briefings.
-         3. Security: Anti-spam contact portal with "Copy to Clipboard" functionality.
-         4. Footer: Centrally aligned professional copyright and ecosystem navigation. -->
+         3. Bio Integration: Footer updated to link to bio.html for professional history.
+         4. Ecosystem Routing: KB and SaaS links directed to comingsoon.html. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
     <script>
@@ -55,7 +55,7 @@
         <div class="hidden md:flex items-center gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
             <a href="#archive-section" class="hover:text-navy transition-colors">Analytical Log</a>
             <a href="#contact-section" class="hover:text-navy transition-colors">Inquiry</a>
-            <a href="https://kb.gsacharya.com" class="hover:text-navy transition-colors">Knowledge Base</a>
+            <a href="comingsoon.html" class="hover:text-navy transition-colors">Knowledge Base</a>
         </div>
         <a href="https://subscribe.gsacharya.com" class="bg-dark text-white px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-safety hover:text-navy transition-all">Subscribe</a>
     </nav>
@@ -71,10 +71,10 @@
             Examining weak signals, human factors, and system design before incidents become reports.
         </p>
         
-        <!-- FEATURED BLOCK (LATEST EDITION) -->
+        <!-- FEATURED BLOCK -->
         <div class="bg-ice border border-gray-100 rounded-3xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 max-w-4xl mx-auto shadow-sm">
             <div class="text-left">
-                <span class="text-[9px] font-extrabold text-safety uppercase tracking-[0.3em] block mb-2">Latest Fortnightly Curation</span>
+                <span class="text-[9px] font-extrabold text-safety uppercase tracking-[0.3em] block mb-2">Latest Curation</span>
                 <h3 id="hero-title" class="text-2xl font-bold text-navy mb-2"></h3>
                 <p id="hero-summary" class="text-sm text-gray-500 font-serif italic"></p>
             </div>
@@ -93,7 +93,7 @@
                         <span class="w-8 h-[1px] bg-gray-200"></span> Analytical Log Archive
                     </h3>
                     <div id="archive-list" class="space-y-4 max-h-[70vh] overflow-y-auto pr-2">
-                        <!-- JS Populated via articleArchive -->
+                        <!-- JS Populated -->
                     </div>
                 </div>
             </aside>
@@ -181,17 +181,16 @@
             <div class="space-y-6 text-center md:text-left">
                 <div class="font-bold text-xl tracking-tighter">The Safety Layer</div>
                 <p class="text-gray-400 text-sm leading-relaxed font-serif italic">
-                    G.S. Acharya | CEO Sita Air Ltd. <br>
-                    Human Factors Instructor since 1977. <br>
-                    Kathmandu, Nepal.
+                    The Project of GS Acharya <br>
+                    <a href="bio.html" class="text-safety hover:underline">About Me</a>
                 </p>
             </div>
             
             <div class="space-y-6 text-center md:text-left">
                 <h4 class="text-[10px] font-extrabold uppercase tracking-[0.3em] text-safety">Ecosystem Hubs</h4>
                 <nav class="flex flex-col gap-5 text-sm font-medium text-gray-400">
-                    <a href="https://kb.gsacharya.com" target="_blank" class="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2"><span>📂</span> Knowledge Base</a>
-                    <a href="https://saas.gsacharya.com" target="_blank" class="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2"><span>💻</span> SaaS Solutions</a>
+                    <a href="comingsoon.html" class="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2"><span>📂</span> Knowledge Base</a>
+                    <a href="comingsoon.html" class="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2"><span>💻</span> SaaS Solutions</a>
                     <a href="https://subscribe.gsacharya.com" target="_blank" class="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2"><span>📩</span> Newsletter Subscription</a>
                 </nav>
             </div>
