@@ -9,11 +9,11 @@
     
     <!-- Chosen Palette: Premium Aviation (White #FFFFFF, Deep Navy #1B263B, Safety Orange #F4A261, Slate #4B5563) -->
     <!-- Application Structure Plan: 
-         - Redesigned as a high-authority directory for home.gsacharya.com.
-         - Centered Hero features the official TSL logo and the latest edition.
-         - The main body is a clean, vertical feed of all historical Beehiiv posts (The Analytical Log).
-         - Each card provides a direct link to the Beehiiv permalink.
-         - Sections for "Analytical Briefing" and "Takeaways" removed to keep the focus on the external read. -->
+         - Redesigned as a streamlined directory/landing page for home.gsacharya.com.
+         - Single-column layout (max-w-4xl) optimized for browsing efficiency.
+         - Removed "Analytical Briefing" and "Strategic Takeaway" to prioritize the click-through to Beehiiv.
+         - Centered Hero with official TSL logo and updated "Browse Article" CTA.
+         - Full reverse-chronological Analytical Log with placeholders for development. -->
     
     <script>
         tailwind.config = {
@@ -38,7 +38,7 @@
         .tsl-logo-container {
             width: 120px; 
             height: 120px; 
-            margin: 0 auto 2rem;
+            margin: 0 auto 2.5rem;
             position: relative;
         }
         .tsl-logo-img {
@@ -81,25 +81,28 @@
         <div class="tsl-logo-container">
             <img src="logo TSL Channel.jpg" alt="The Safety Layer Logo" class="tsl-logo-img" onerror="this.src='https://via.placeholder.com/120?text=TSL+Logo'">
         </div>
-        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter mb-4 text-dark italic">The Safety Layer</h1>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter mb-4 text-dark italic text-balance">The Safety Layer</h1>
         <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight mb-8 text-dark text-balance uppercase leading-tight">Understanding Aviation Safety Before Failure</h2>
-        <p class="text-lg text-gray-500 font-medium max-w-2xl mx-auto leading-relaxed">
+        <p class="text-lg text-gray-500 font-medium max-w-2xl mx-auto leading-relaxed mb-8">
             A chronological record of analytical case studies focusing on <b>human performance</b>, latent system conditions, and AI integration in flight safety.
         </p>
+        <a href="#archive-section" class="inline-flex items-center gap-2 text-navy font-bold text-xs uppercase tracking-widest border-b-2 border-safety pb-1 hover:text-safety transition-colors">
+            Browse Article <span>↗</span>
+        </a>
     </header>
 
-    <main class="container mx-auto px-4 max-w-5xl">
+    <main class="container mx-auto px-4 max-w-4xl">
         
-        <!-- THE ANALYTICAL LOG (ARCHIVE) -->
+        <!-- THE ANALYTICAL LOG -->
         <section id="archive-section" class="py-20">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
                 <div>
-                    <h3 class="text-xs font-extrabold uppercase tracking-[0.3em] text-safety mb-2">Historical Log</h3>
-                    <h2 class="text-3xl font-extrabold tracking-tight text-navy">The Complete Archive</h2>
+                    <h3 class="text-xs font-extrabold uppercase tracking-[0.3em] text-safety mb-2">The Latest Editions</h3>
+                    <h2 class="text-3xl font-extrabold tracking-tight text-navy">Analytical Log</h2>
                 </div>
-                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">6 Editions Published</p>
             </div>
 
+            <!-- This is where the JS will populate the list -->
             <div id="log-feed" class="grid grid-cols-1 gap-6">
                 <!-- JS Populated Feed -->
             </div>
@@ -114,10 +117,10 @@
                     Direct communication for institutional training, safety audits, or technical feedback is monitored via secure inquiry.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-6">
-                    <a href="https://tally.so#your-form-id" target="_blank" class="bg-navy text-white px-12 py-5 rounded-full font-bold text-[11px] uppercase tracking-widest hover:bg-safety hover:text-navy transition-all shadow-xl">
+                    <a href="https://tally.so#LATEST-FORM-ID" target="_blank" class="bg-navy text-white px-12 py-5 rounded-full font-bold text-[11px] uppercase tracking-widest hover:bg-safety hover:text-navy transition-all shadow-xl">
                         Open Inquiry Portal
                     </a>
-                    <button onclick="copyToClipboard('acharyajees@gmail.com')" class="bg-white border border-gray-200 text-navy px-12 py-5 rounded-full font-bold text-[11px] uppercase tracking-widest hover:border-navy transition-all group">
+                    <button onclick="copyToClipboard('acharyajees@gmail.com')" class="bg-white border border-gray-100 text-navy px-12 py-5 rounded-full font-bold text-[11px] uppercase tracking-widest hover:border-navy transition-all group">
                         <span class="group-hover:text-safety transition-colors">Copy Contact Address</span>
                     </button>
                 </div>
@@ -160,7 +163,8 @@
 
     <script>
         /**
-         * FULL BEEHIIV HISTORY (LATEST AT TOP)
+         * FULL ARTICLE HISTORY
+         * Replace 'LATEST-POST-URL-HERE' with your actual Beehiiv permalinks.
          */
         const articleArchive = [
             {
@@ -168,61 +172,65 @@
                 title: 'The Swiss Cheese at LaGuardia',
                 date: 'March 31, 2026',
                 tagline: 'Why a fatal runway crash in NYC matters for the mountains of Nepal.',
-                link: 'https://subscribe.gsacharya.com/p/laguardia-swiss-cheese'
+                link: 'LATEST-POST-URL-HERE'
             },
             {
                 id: 'p2',
                 title: 'The Challenger Legacy: Why "Tribal Knowledge" is Not a Safety Strategy',
                 date: 'March 17, 2026',
                 tagline: 'Informal wisdom is a gift; documented resilience is a requirement.',
-                link: 'https://subscribe.gsacharya.com/p/challenger-tribal-knowledge'
+                link: 'LATEST-POST-URL-HERE'
             },
             {
                 id: 'p3',
                 title: 'The Human Factor of Your Inbox',
                 date: 'March 04, 2026',
                 tagline: 'A quick "systems update" from Ghanshyam Acharya.',
-                link: 'https://subscribe.gsacharya.com/p/human-factor-inbox'
+                link: 'LATEST-POST-URL-HERE'
             },
             {
                 id: 'p4',
                 title: 'Tenerife: When the System Itself Failed',
                 date: 'March 03, 2026',
                 tagline: 'The deadliest accident in aviation was a systems failure.',
-                link: 'https://subscribe.gsacharya.com/p/tenerife-systems-failure'
+                link: 'LATEST-POST-URL-HERE'
             },
             {
                 id: 'p5',
                 title: 'Welcome to The Safety Layer Post',
                 date: 'March 02, 2026',
                 tagline: 'A technical note on our mission and upcoming analytical frameworks.',
-                link: 'https://subscribe.gsacharya.com/p/welcome-post'
+                link: 'LATEST-POST-URL-HERE'
             },
             {
                 id: 'p6',
                 title: 'Welcome to The Safety Layer',
                 date: 'March 01, 2026',
                 tagline: 'The inaugural briefing from Ghanshyam Acharya.',
-                link: 'https://subscribe.gsacharya.com/p/welcome'
+                link: 'LATEST-POST-URL-HERE'
             }
         ];
 
+        /**
+         * The engine that transforms the 'articleArchive' data into 
+         * visible HTML cards in the Analytical Log section.
+         */
         function buildLog() {
             const feed = document.getElementById('log-feed');
             articleArchive.forEach((art, idx) => {
                 const card = document.createElement('div');
-                card.className = `article-card bg-white border border-gray-100 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6`;
+                card.className = `article-card bg-white border border-gray-100 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm hover:shadow-md transition-shadow`;
                 card.innerHTML = `
-                    <div class="flex-grow">
+                    <div class="flex-grow text-left">
                         <div class="flex items-center gap-3 mb-2">
                             <span class="text-[9px] font-extrabold text-gray-400 uppercase tracking-widest">${art.date}</span>
-                            ${idx === 0 ? '<span class="text-[8px] bg-navy text-white px-2 py-0.5 rounded-full font-bold uppercase">Newest</span>' : ''}
+                            ${idx === 0 ? '<span class="text-[8px] bg-navy text-white px-2 py-0.5 rounded-full font-bold uppercase">Latest</span>' : ''}
                         </div>
                         <h4 class="text-xl md:text-2xl font-bold text-navy mb-2 leading-tight">${art.title}</h4>
                         <p class="text-sm text-gray-500 font-serif italic">${art.tagline}</p>
                     </div>
-                    <div class="shrink-0">
-                        <a href="${art.link}" target="_blank" class="inline-flex items-center gap-2 bg-ice border border-gray-100 text-navy px-8 py-3 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-navy hover:text-white transition-all group">
+                    <div class="shrink-0 w-full md:w-auto">
+                        <a href="${art.link}" target="_blank" class="flex items-center justify-center gap-2 bg-ice border border-gray-100 text-navy px-8 py-4 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-navy hover:text-white transition-all group w-full">
                             Read Full Edition
                             <span class="group-hover:translate-x-1 transition-transform">→</span>
                         </a>
@@ -245,6 +253,7 @@
             setTimeout(() => msg.style.opacity = '0', 2000);
         }
 
+        // Initialize the log on load
         window.onload = () => {
             buildLog();
         };
