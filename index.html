@@ -6,30 +6,12 @@
     <title>The Safety Layer | Analytical Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Chosen Palette: Premium Aviation (White #FFFFFF, Deep Navy #1B263B, Safety Orange #F4A261, Dark Gray #4B5563) -->
-    <!-- Application Structure Plan: 
-         - Finalized authority hub for home.gsacharya.com.
-         - Features a high-impact centered hero with the official TSL logo.
-         - Integrated HTML-based formatting for analysis text to replace failing markdown markers.
-         - Reverse-chronological "Analytical Log" for easy archive navigation.
-         - Secure consultation portal and ecosystem footer. -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
-
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        navy: '#1B263B',
-                        safety: '#F4A261',
-                        dark: '#111827',
-                        ice: '#F9FAFB'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Lora', 'serif'],
-                    }
+                    colors: { navy: '#1B263B', safety: '#F4A261', dark: '#111827', ice: '#F9FAFB' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Lora', 'serif'] }
                 }
             }
         }
@@ -37,37 +19,17 @@
     <style>
         body { background-color: #FFFFFF; color: #111827; scroll-behavior: smooth; }
         .archive-card.active { border-color: #1B263B; background-color: #F9FAFB; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
-        
-        /* Official Logo Container */
-        .tsl-logo-container {
-            width: 140px; 
-            height: 140px; 
-            margin: 0 auto 2.5rem;
-            position: relative;
-        }
-        .tsl-logo-img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 50%; /* Matches the circular TSL logo */
-            box-shadow: 0 20px 40px -10px rgba(27, 38, 59, 0.15);
-            border: 4px solid #FFFFFF;
-        }
-        
+        .tsl-logo-container { width: 140px; height: 140px; margin: 0 auto 2.5rem; position: relative; }
+        .tsl-logo-img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; box-shadow: 0 20px 40px -10px rgba(27, 38, 59, 0.15); border: 4px solid #FFFFFF; }
         ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: #f9fafb; }
         ::-webkit-scrollbar-thumb { background: #1B263B; border-radius: 10px; }
-
-        /* Ensuring Bold/Italic formatting in innerHTML */
         .rich-text b { font-weight: 800; color: #111827; }
         .rich-text i { font-style: italic; color: #4B5563; }
     </style>
 </head>
 <body class="font-sans antialiased">
-
-    <!-- NAVIGATION -->
     <nav class="py-6 px-8 flex justify-between items-center border-b border-gray-100 sticky top-0 bg-white bg-opacity-95 backdrop-blur-sm z-50">
-        <div class="flex items-center gap-2 font-bold text-navy tracking-tight cursor-default">
+        <div class="flex items-center gap-2 font-bold text-navy tracking-tight cursor-default text-sm md:text-base">
             <span>🛡️</span> The Safety Layer
         </div>
         <div class="hidden md:flex items-center gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
@@ -78,7 +40,6 @@
         <a href="https://subscribe.gsacharya.com" class="bg-dark text-white px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-safety hover:text-navy transition-all">Subscribe</a>
     </nav>
 
-    <!-- HERO SECTION -->
     <header class="pt-20 pb-16 px-6 text-center max-w-5xl mx-auto">
         <div class="tsl-logo-container">
             <img src="logo TSL Channel.jpg" alt="The Safety Layer Logo" class="tsl-logo-img" onerror="this.src='https://via.placeholder.com/140?text=TSL+Logo'">
@@ -88,60 +49,45 @@
         <p class="text-lg md:text-xl text-gray-500 font-medium max-w-2xl mx-auto leading-relaxed mb-12">
             Examining <b>weak signals</b>, human factors, and system design before incidents become reports.
         </p>
-        
-        <!-- FEATURED BLOCK (LATEST EDITION) -->
         <div class="bg-ice border border-gray-100 rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 max-w-4xl mx-auto shadow-sm">
             <div class="text-left">
                 <span class="text-[10px] font-extrabold text-safety uppercase tracking-[0.3em] block mb-3">Latest Fortnightly Curation</span>
                 <h3 id="hero-title" class="text-3xl font-bold text-navy mb-3 leading-tight"></h3>
                 <p id="hero-summary" class="text-base text-gray-500 font-serif italic"></p>
             </div>
-            <button onclick="scrollToId('archive-section')" class="bg-navy text-white px-10 py-4 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-safety hover:text-navy transition-all shrink-0 shadow-lg">Explore Hub</button>
+            <button onclick="scrollToId('archive-section')" class="bg-navy text-white px-10 py-4 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-safety hover:text-navy transition-all shrink-0 shadow-xl">Explore Hub</button>
         </div>
     </header>
 
     <main class="container mx-auto px-4">
-        
         <div id="archive-section" class="grid grid-cols-1 lg:grid-cols-12 gap-12 py-20 border-t border-gray-100">
-            
-            <!-- LEFT: PAST ARTICLES LOG -->
             <aside class="lg:col-span-4 order-2 lg:order-1">
                 <div class="sticky top-28">
                     <h3 class="text-xs font-extrabold uppercase tracking-[0.2em] text-gray-400 mb-8 flex items-center gap-2">
                         <span class="w-8 h-[1px] bg-gray-200"></span> Analytical Log Archive
                     </h3>
-                    <div id="archive-list" class="space-y-4 max-h-[70vh] overflow-y-auto pr-2">
-                        <!-- JS Populated via articleArchive -->
-                    </div>
+                    <div id="archive-list" class="space-y-4 max-h-[70vh] overflow-y-auto pr-2"></div>
                 </div>
             </aside>
 
-            <!-- RIGHT: THE CONTENT ENGINE -->
             <div class="lg:col-span-8 order-1 lg:order-2">
                 <div id="content-area" class="bg-white rounded-[3rem] border border-gray-100 shadow-2xl p-8 md:p-14 min-h-[600px] flex flex-col">
-                    
                     <div class="flex flex-col md:flex-row justify-between items-start gap-4 mb-12">
                         <div>
                             <span id="view-date" class="text-[10px] font-extrabold text-safety uppercase tracking-widest block mb-2"></span>
-                            <h2 id="view-title" class="text-4xl font-extrabold tracking-tight text-navy leading-tight"></h2>
+                            <h2 id="view-title" class="text-4xl font-extrabold tracking-tight text-navy leading-tight text-balance"></h2>
                         </div>
                         <span class="bg-ice text-navy text-[9px] font-extrabold px-5 py-2 rounded-full border border-gray-100 tracking-widest uppercase shrink-0">Analytical Briefing</span>
                     </div>
-
                     <div id="view-summary" class="rich-text text-xl text-gray-600 font-serif italic mb-14 border-l-8 border-ice pl-8 leading-relaxed"></div>
-
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 flex-grow">
-                        <!-- HUMAN FACTORS -->
                         <div>
                             <h4 class="text-xs font-extrabold uppercase tracking-widest text-navy mb-6 flex items-center gap-2">
                                 <span class="text-lg">🧠</span> Human Performance
                             </h4>
                             <div id="view-hf" class="rich-text text-gray-600 leading-relaxed font-serif text-base"></div>
                         </div>
-
-                        <!-- AI MITIGATION -->
                         <div class="bg-navy text-white p-10 rounded-[2rem] relative overflow-hidden flex flex-col">
-                            <div class="absolute -right-6 -bottom-6 text-8xl opacity-5">🤖</div>
                             <h4 class="text-xs font-extrabold uppercase tracking-widest text-safety mb-6 relative z-10">AI Safety Layer</h4>
                             <div id="view-ai" class="rich-text text-sm text-gray-300 leading-relaxed mb-10 font-serif relative z-10"></div>
                             <div class="mt-auto relative z-10">
@@ -155,8 +101,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- CTA PORTAL -->
                     <div class="mt-16 pt-12 border-t border-gray-100 flex flex-col lg:flex-row items-center justify-between gap-10">
                         <div class="flex items-center gap-6">
                             <div class="w-14 h-14 bg-ice rounded-full flex items-center justify-center text-3xl shadow-inner border border-gray-100 text-safety">⚡</div>
@@ -165,60 +109,43 @@
                                 <p id="view-debrief" class="rich-text font-extrabold text-navy text-base leading-tight"></p>
                             </div>
                         </div>
-                        <a id="view-link" href="#" target="_blank" class="bg-dark text-white px-12 py-5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-safety hover:text-navy transition-all shadow-xl whitespace-nowrap">
-                            Read Original Edition
-                        </a>
+                        <a id="view-link" href="#" target="_blank" class="bg-dark text-white px-12 py-5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-safety hover:text-navy transition-all shadow-xl whitespace-nowrap">Read Original Edition</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- CONTACT SECTION -->
         <section id="contact-section" class="py-36 border-t border-gray-100 text-center">
             <div class="max-w-2xl mx-auto">
                 <h3 class="text-xs font-extrabold uppercase tracking-[0.2em] text-safety mb-6">Inquiry & Feedback</h3>
                 <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-8">Professional Consultation</h2>
-                <p class="text-gray-500 font-serif italic mb-14 leading-relaxed text-lg">
-                    To maintain high-signal communication and prevent automated spam, direct email is monitored via secure inquiry. Use the portal below for institutional training or technical feedback.
-                </p>
+                <p class="text-gray-500 font-serif italic mb-14 leading-relaxed text-lg">To maintain high-signal communication, direct email is monitored via secure inquiry.</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-6">
-                    <a href="https://tally.so#your-form-here" target="_blank" class="bg-navy text-white px-12 py-5 rounded-full font-bold text-[11px] uppercase tracking-widest hover:bg-safety hover:text-navy transition-all shadow-2xl">
-                        Open Inquiry Portal
-                    </a>
-                    <button onclick="copyToClipboard('acharyajees@gmail.com')" class="bg-white border border-gray-200 text-navy px-12 py-5 rounded-full font-bold text-[11px] uppercase tracking-widest hover:border-navy transition-all group">
-                        <span class="group-hover:text-safety transition-colors">Copy Contact Address</span>
-                    </button>
+                    <a href="https://tally.so#your-form-id" target="_blank" class="bg-navy text-white px-12 py-5 rounded-full font-bold text-[11px] uppercase tracking-widest hover:bg-safety shadow-2xl">Open Inquiry Portal</a>
+                    <button onclick="copyToClipboard('acharyajees@gmail.com')" class="bg-white border border-gray-200 text-navy px-12 py-5 rounded-full font-bold text-[11px] uppercase tracking-widest hover:border-navy transition-all">Copy Contact Address</button>
                 </div>
                 <div id="copy-msg" class="mt-6 text-[11px] font-bold text-safety uppercase opacity-0 transition-opacity">Address Copied to Clipboard</div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER ECOSYSTEM -->
     <footer class="bg-dark text-white py-24 px-8 border-t-[16px] border-navy">
         <div class="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-20 mb-20">
             <div class="space-y-8 text-center md:text-left">
                 <div class="font-bold text-2xl tracking-tighter">The Safety Layer</div>
-                <p class="text-gray-400 text-sm leading-relaxed font-serif italic">
-                    The Project of GS Acharya <br>
-                    <a href="bio.html" class="text-safety hover:underline font-sans font-bold text-xs uppercase tracking-widest mt-4 block">About Me</a>
-                </p>
+                <p class="text-gray-400 text-sm leading-relaxed font-serif italic">The Project of GS Acharya<br><a href="bio.html" class="text-safety hover:underline font-sans font-bold text-xs uppercase tracking-widest mt-4 block">About Me</a></p>
             </div>
-            
             <div class="space-y-8 text-center md:text-left">
                 <h4 class="text-[11px] font-extrabold uppercase tracking-[0.3em] text-safety">Ecosystem Hubs</h4>
                 <nav class="flex flex-col gap-6 text-sm font-medium text-gray-400">
-                    <a href="comingsoon.html" class="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-3"><span>📂</span> Knowledge Base</a>
-                    <a href="comingsoon.html" class="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-3"><span>💻</span> SaaS Solutions</a>
-                    <a href="https://subscribe.gsacharya.com" target="_blank" class="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-3"><span>📩</span> Newsletter Subscription</a>
+                    <a href="comingsoon.html" class="hover:text-white transition-colors">📂 Knowledge Base</a>
+                    <a href="comingsoon.html" class="hover:text-white transition-colors">💻 SaaS Solutions</a>
+                    <a href="https://subscribe.gsacharya.com" target="_blank" class="hover:text-white transition-colors">📩 Newsletter Subscription</a>
                 </nav>
             </div>
-
             <div class="space-y-8 text-center md:text-left">
                 <h4 class="text-[11px] font-extrabold uppercase tracking-[0.3em] text-safety">The Mission</h4>
-                <p class="text-gray-500 text-xs leading-loose font-medium">
-                    Utilizing artificial intelligence and decades of operational experience to detect the <i>latent conditions</i> of failure before they manifest into incidents.
-                </p>
+                <p class="text-gray-500 text-xs leading-loose font-medium">Detecting latent conditions of failure before they manifest into incidents.</p>
             </div>
         </div>
         <div class="container mx-auto max-w-6xl pt-10 border-t border-white border-opacity-5 text-[11px] font-bold text-gray-600 uppercase tracking-[0.3em] text-center">
@@ -227,89 +154,31 @@
     </footer>
 
     <script>
-        /**
-         * ARTICLE DATABASE (LATEST AT TOP)
-         * Replaced markdown syntax with HTML <b> and <i> tags for reliable rendering.
-         */
         const articleArchive = [
-            {
-                id: 'p1',
-                title: 'The Swiss Cheese at LaGuardia',
-                date: 'March 31, 2026',
-                summary: 'Fortnightly curation: A breakdown of fatal runway incursions and cross-learning for Nepal operations.',
-                hf: 'Explores <b>Environmental Fixation</b>. The crew allowed localized weather distractions to break stabilized approach criteria. Analysis of the latent system failures that led to the final alignment of the <i>Swiss Cheese</i> model.',
-                ai: 'Predictive terrain alert integration with AI-filtered frequencies would have identified the deviation 45 seconds prior to impact, bypassing crew cognitive fixation.',
-                aiScore: 88,
-                debrief: 'Geography does not grant exceptions to stabilized approach criteria. Standardize the baseline.',
-                link: 'https://subscribe.gsacharya.com/p/laguardia-swiss-cheese'
-            },
-            {
-                id: 'p2',
-                title: "The Challenger Legacy: Tribal Knowledge",
-                date: 'March 17, 2026',
-                summary: 'Examining why informal wisdom is not a sustainable safety strategy for growing fleets.',
-                hf: 'Analysis of <b>Normalization of Deviance</b>. When technical warnings are ignored because "it worked last time," safety systems degrade permanently through cultural acceptance.',
-                ai: 'Knowledge-Graph AI can audit documented SOPs against actual FDR outputs to flag deviations before they become cultural habits across the pilot group.',
-                aiScore: 92,
-                debrief: 'Resilience is built on documented procedures, not informal shortcuts passed down through <b>tribal knowledge</b>.',
-                link: 'https://subscribe.gsacharya.com/p/challenger-tribal-knowledge'
-            },
-            {
-                id: 'p3',
-                title: 'The Human Factor of Your Inbox',
-                date: 'March 04, 2026',
-                summary: 'Systems update on information architecture in safety communications.',
-                hf: 'Examines the <b>Cognitive Cost</b> of information overload. How pilots process safety bulletins in high-workload environments and the risk of <i>bulletin fatigue</i>.',
-                ai: 'NLP can summarize critical safety bulletins into cockpit-ready <b>Actionable Briefs</b>, reducing pilot cognitive load by up to 35% during pre-flight prep.',
-                aiScore: 75,
-                debrief: 'Prioritize concise, actionable safety communications over high-volume administrative updates.',
-                link: 'https://subscribe.gsacharya.com/p/human-factor-inbox'
-            },
-            {
-                id: 'p4',
-                title: 'Tenerife: Systems Failure Case Study',
-                date: 'March 03, 2026',
-                summary: 'The deadliest accident in aviation history analyzed through a modern system lens.',
-                hf: '<b>Communication Breakdown and Authority Gradients</b>. The intersection of heavy fog, ambiguous ATC phrasing, and a Captain under significant pressure.',
-                ai: 'Conflict resolution AI in the tower and cockpit would have identified dual-occupancy and issued an immediate runway abort command via ADS-B fusion.',
-                aiScore: 98,
-                debrief: '<b>Doubt is the trigger for stopping.</b> If communication is unclear, assume the runway is occupied until proven otherwise.',
-                link: 'https://subscribe.gsacharya.com/p/tenerife-systems-failure'
-            }
+            { id: 'p1', title: 'The Swiss Cheese at LaGuardia', date: 'March 31, 2026', summary: 'Why a fatal runway crash in NYC matters for the mountains of Nepal.', hf: 'Explores <b>Environmental Fixation</b> and the breakdown of stabilized approach criteria.', ai: 'AI-filtered frequencies would have identified deviation 45s prior to impact.', aiScore: 88, debrief: 'Geography does not grant exceptions to stabilized approach criteria.', link: 'https://subscribe.gsacharya.com/p/laguardia-swiss-cheese' },
+            { id: 'p2', title: 'The Challenger Legacy: Why "Tribal Knowledge" is Not a Safety Strategy', date: 'March 17, 2026', summary: 'Informal wisdom is a gift; documented resilience is a requirement.', hf: 'Analysis of <b>Normalization of Deviance</b>.', ai: 'Knowledge-Graph AI can audit documented SOPs against FDR outputs.', aiScore: 92, debrief: 'Resilience is built on documented procedures, not <b>tribal knowledge</b>.', link: 'https://subscribe.gsacharya.com/p/challenger-tribal-knowledge' },
+            { id: 'p3', title: 'The Human Factor of Your Inbox', date: 'March 04, 2026', summary: 'Cognitive cost of information overload in safety communications.', hf: 'Examines <b>Cognitive Cost</b> and <i>bulletin fatigue</i>.', ai: 'NLP can summarize bulletins into <b>Actionable Briefs</b>.', aiScore: 75, debrief: 'Prioritize concise, actionable safety communications.', link: 'https://subscribe.gsacharya.com/p/human-factor-inbox' },
+            { id: 'p4', title: 'Tenerife: When the System Itself Failed', date: 'March 03, 2026', summary: 'Deadliest accident in aviation history analyzed through a systems lens.', hf: '<b>Communication Breakdown and Authority Gradients</b>.', ai: 'Conflict resolution AI would have identified dual-occupancy.', aiScore: 98, debrief: '<b>Doubt is the trigger for stopping.</b> If communication is unclear, wait.', link: 'https://subscribe.gsacharya.com/p/tenerife-systems-failure' },
+            { id: 'p5', title: 'Welcome to The Safety Layer Post', date: 'March 02, 2026', summary: 'Technical note on our mission and analytical frameworks.', hf: 'Defining the <b>Safety Performance Framework</b>.', ai: 'Baseline for <b>Predictive Reliability</b> scoring.', aiScore: 50, debrief: 'Analysis must be consistent. We analyze to learn.', link: 'https://subscribe.gsacharya.com/p/welcome-post' },
+            { id: 'p6', title: 'Welcome to The Safety Layer', date: 'March 01, 2026', summary: 'Inaugural briefing from Ghanshyam Acharya.', hf: 'Bringing 45+ years of experience to the digital age.', ai: 'AI as a high-fidelity <b>Safety Layer</b> detecting latent conditions.', aiScore: 40, debrief: 'Shared intelligence minimizes the learning curve.', link: 'https://subscribe.gsacharya.com/p/welcome' }
         ];
 
-        function scrollToId(id) {
-            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-        }
-
+        function scrollToId(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }); }
         function buildArchive() {
             const list = document.getElementById('archive-list');
             articleArchive.forEach((art, idx) => {
                 const card = document.createElement('div');
                 card.className = `archive-card p-6 border border-gray-100 rounded-2xl cursor-pointer transition-all hover:bg-ice group ${idx === 0 ? 'active' : ''}`;
                 card.onclick = () => selectArticle(art.id, card);
-                card.innerHTML = `
-                    <div class="flex justify-between items-center mb-2">
-                        <p class="text-[9px] font-extrabold text-gray-400 uppercase tracking-widest">${art.date}</p>
-                        ${idx === 0 ? '<span class="text-[8px] bg-safety text-white px-2 py-0.5 rounded-full font-bold uppercase tracking-tighter">Latest</span>' : ''}
-                    </div>
-                    <h4 class="font-bold text-navy group-hover:text-safety transition-colors leading-tight text-sm font-sans">${art.title}</h4>
-                `;
+                card.innerHTML = `<div class="flex justify-between items-center mb-2"><p class="text-[9px] font-extrabold text-gray-400 uppercase tracking-widest">${art.date}</p>${idx === 0 ? '<span class="text-[8px] bg-safety text-white px-2 py-0.5 rounded-full font-bold">Latest</span>' : ''}</div><h4 class="font-bold text-navy group-hover:text-safety transition-colors leading-tight text-sm font-sans">${art.title}</h4>`;
                 list.appendChild(card);
-                
-                if(idx === 0) {
-                    document.getElementById('hero-title').innerText = art.title;
-                    document.getElementById('hero-summary').innerText = art.summary;
-                }
+                if(idx === 0) { document.getElementById('hero-title').innerText = art.title; document.getElementById('hero-summary').innerText = art.summary; }
             });
         }
-
         function selectArticle(id, element) {
             const art = articleArchive.find(a => a.id === id);
             document.querySelectorAll('.archive-card').forEach(c => c.classList.remove('active'));
             element.classList.add('active');
-
-            // Using innerHTML to support <b> and <i> tags correctly
             document.getElementById('view-title').innerText = art.title;
             document.getElementById('view-date').innerText = art.date;
             document.getElementById('view-summary').innerHTML = art.summary;
@@ -319,27 +188,13 @@
             document.getElementById('view-link').href = art.link;
             document.getElementById('ai-bar').style.width = art.aiScore + '%';
             document.getElementById('ai-score-label').innerText = art.aiScore + '%';
-
             if(window.innerWidth < 1024) scrollToId('archive-section');
         }
-
         function copyToClipboard(text) {
-            const el = document.createElement('textarea');
-            el.value = text;
-            document.body.appendChild(el);
-            el.select();
-            document.execCommand('copy');
-            document.body.removeChild(el);
-            
-            const msg = document.getElementById('copy-msg');
-            msg.style.opacity = '1';
-            setTimeout(() => msg.style.opacity = '0', 2000);
+            const el = document.createElement('textarea'); el.value = text; document.body.appendChild(el); el.select(); document.execCommand('copy'); document.body.removeChild(el);
+            const msg = document.getElementById('copy-msg'); msg.style.opacity = '1'; setTimeout(() => msg.style.opacity = '0', 2000);
         }
-
-        window.onload = () => {
-            buildArchive();
-            selectArticle(articleArchive[0].id, document.querySelector('.archive-card'));
-        };
+        window.onload = () => { buildArchive(); selectArticle(articleArchive[0].id, document.querySelector('.archive-card')); };
     </script>
 </body>
 </html>
