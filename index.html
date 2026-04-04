@@ -1,262 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Safety Layer | Analytical Hub</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Chosen Palette: Premium Aviation (White #FFFFFF, Deep Navy #1B263B, Safety Orange #F4A261, Slate #4B5563) -->
-    <!-- Application Structure Plan: 
-         - Redesigned as a streamlined directory/landing page for home.gsacharya.com.
-         - Single-column layout (max-w-4xl) optimized for browsing efficiency.
-         - Removed "Analytical Briefing" and "Strategic Takeaway" to prioritize the click-through to Beehiiv.
-         - Centered Hero with official TSL logo and updated "Browse Article" CTA.
-         - Full reverse-chronological Analytical Log with placeholders for development. -->
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: '#1B263B',
-                        safety: '#F4A261',
-                        dark: '#111827',
-                        ice: '#F9FAFB'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Lora', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body { background-color: #FFFFFF; color: #111827; scroll-behavior: smooth; }
-        .tsl-logo-container {
-            width: 120px; 
-            height: 120px; 
-            margin: 0 auto 2.5rem;
-            position: relative;
-        }
-        .tsl-logo-img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 50%;
-            box-shadow: 0 15px 30px -10px rgba(27, 38, 59, 0.1);
-        }
-        .article-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .article-card:hover {
-            transform: translateY(-4px);
-            border-color: #1B263B;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
-        }
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: #f9fafb; }
-        ::-webkit-scrollbar-thumb { background: #1B263B; border-radius: 10px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Safety Layer | Analytical Hub</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+navy: '#1B263B',
+safety: '#F4A261',
+dark: '#111827',
+ice: '#F9FAFB'
+},
+fontFamily: {
+sans: ['Inter', 'sans-serif'],
+serif: ['Lora', 'serif']
+}
+}
+}
+}
+</script>
+
+<style>
+body {
+background-color: #FFFFFF;
+color: #111827;
+scroll-behavior: smooth;
+}
+
+.tsl-logo-container {
+width: 120px;
+height: 120px;
+margin: 0 auto 2.5rem;
+}
+
+.tsl-logo-img {
+width: 100%;
+height: 100%;
+object-fit: contain;
+border-radius: 50%;
+box-shadow: 0 15px 30px -10px rgba(27,38,59,0.1);
+}
+
+.article-card {
+transition: all 0.3s ease;
+}
+
+.article-card:hover {
+transform: translateY(-4px);
+border-color: #1B263B;
+box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05);
+}
+</style>
 </head>
+
 <body class="font-sans antialiased">
 
-    <!-- NAVIGATION -->
-    <nav class="py-6 px-8 flex justify-between items-center border-b border-gray-100 sticky top-0 bg-white bg-opacity-95 backdrop-blur-sm z-50">
-        <div class="flex items-center gap-2 font-bold text-navy tracking-tight cursor-default">
-            <span>🛡️</span> The Safety Layer
-        </div>
-        <div class="hidden md:flex items-center gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
-            <a href="#archive-section" class="hover:text-navy transition-colors">Analytical Log</a>
-            <a href="#contact-section" class="hover:text-navy transition-colors">Inquiry</a>
-            <a href="comingsoon.html" class="hover:text-navy transition-colors">Knowledge Base</a>
-        </div>
-        <a href="https://subscribe.gsacharya.com" class="bg-dark text-white px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-safety hover:text-navy transition-all">Subscribe</a>
-    </nav>
+<!-- NAV -->
+<nav class="py-6 px-8 flex justify-between items-center border-b border-gray-100 sticky top-0 bg-white z-50">
 
-    <!-- HERO SECTION -->
-    <header class="pt-20 pb-16 px-6 text-center max-w-4xl mx-auto border-b border-gray-50">
-        <div class="tsl-logo-container">
-            <img src="logo TSL Channel.jpg" alt="The Safety Layer Logo" class="tsl-logo-img" onerror="this.src='https://via.placeholder.com/120?text=TSL+Logo'">
-        </div>
-        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter mb-4 text-dark italic text-balance">The Safety Layer</h1>
-        <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight mb-8 text-dark text-balance uppercase leading-tight">Understanding Aviation Safety Before Failure</h2>
-        <p class="text-lg text-gray-500 font-medium max-w-2xl mx-auto leading-relaxed mb-8">
-            A chronological record of analytical case studies focusing on <b>human performance</b>, latent system conditions, and AI integration in flight safety.
-        </p>
-        <a href="#archive-section" class="inline-flex items-center gap-2 text-navy font-bold text-xs uppercase tracking-widest border-b-2 border-safety pb-1 hover:text-safety transition-colors">
-            Browse Article <span>↗</span>
-        </a>
-    </header>
+<div class="flex items-center gap-2 font-bold text-navy">
+🛡️ The Safety Layer
+</div>
 
-    <main class="container mx-auto px-4 max-w-4xl">
-        
-        <!-- THE ANALYTICAL LOG -->
-        <section id="archive-section" class="py-20">
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
-                <div>
-                    <h3 class="text-xs font-extrabold uppercase tracking-[0.3em] text-safety mb-2">The Latest Editions</h3>
-                    <h2 class="text-3xl font-extrabold tracking-tight text-navy">Analytical Log</h2>
-                </div>
-            </div>
+<div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-gray-400">
 
-            <!-- This is where the JS will populate the list -->
-            <div id="log-feed" class="grid grid-cols-1 gap-6">
-                <!-- JS Populated Feed -->
-            </div>
-        </section>
+<a href="#archive-section" class="hover:text-navy">Analytical Log</a>
+<a href="#contact-section" class="hover:text-navy">Inquiry</a>
+<a href="#" class="hover:text-navy">Knowledge Base</a>
 
-        <!-- SECURED CONTACT SECTION -->
-        <section id="contact-section" class="py-32 border-t border-gray-100 text-center">
-            <div class="max-w-2xl mx-auto">
-                <h3 class="text-xs font-extrabold uppercase tracking-[0.2em] text-safety mb-6">Inquiry & Feedback</h3>
-                <h2 class="text-4xl font-extrabold tracking-tight mb-8">Professional Consultation</h2>
-                <p class="text-gray-500 font-serif italic mb-14 leading-relaxed text-lg">
-                    Direct communication for institutional training, safety audits, or technical feedback is monitored via secure inquiry.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-6">
-                    <a href="https://tally.so#LATEST-FORM-ID" target="_blank" class="bg-navy text-white px-12 py-5 rounded-full font-bold text-[11px] uppercase tracking-widest hover:bg-safety hover:text-navy transition-all shadow-xl">
-                        Open Inquiry Portal
-                    </a>
-                    <button onclick="copyToClipboard('acharyajees@gmail.com')" class="bg-white border border-gray-100 text-navy px-12 py-5 rounded-full font-bold text-[11px] uppercase tracking-widest hover:border-navy transition-all group">
-                        <span class="group-hover:text-safety transition-colors">Copy Contact Address</span>
-                    </button>
-                </div>
-                <div id="copy-msg" class="mt-6 text-[11px] font-bold text-safety uppercase opacity-0 transition-opacity">Address Copied to Clipboard</div>
-            </div>
-        </section>
-    </main>
+</div>
 
-    <!-- FOOTER ECOSYSTEM -->
-    <footer class="bg-dark text-white py-24 px-8 border-t-[16px] border-navy">
-        <div class="container mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-16 mb-20">
-            <div class="space-y-6 text-center md:text-left">
-                <div class="font-bold text-2xl tracking-tighter">The Safety Layer</div>
-                <p class="text-gray-400 text-sm leading-relaxed font-serif italic">
-                    The Project of GS Acharya <br>
-                    <a href="bio.html" class="text-safety hover:underline font-sans font-bold text-xs uppercase tracking-widest mt-4 block">About Me</a>
-                </p>
-            </div>
-            
-            <div class="space-y-8 text-center md:text-left">
-                <h4 class="text-[11px] font-extrabold uppercase tracking-[0.3em] text-safety">Ecosystem Hubs</h4>
-                <nav class="flex flex-col gap-6 text-sm font-medium text-gray-400">
-                    <a href="comingsoon.html" class="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-3"><span>📂</span> Knowledge Base</a>
-                    <a href="comingsoon.html" class="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-3"><span>💻</span> SaaS Solutions</a>
-                    <a href="https://subscribe.gsacharya.com" target="_blank" class="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-3"><span>📩</span> Newsletter Subscription</a>
-                </nav>
-            </div>
+<a href="https://newsletter.gsacharya.com"
+class="bg-dark text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-safety hover:text-navy">
 
-            <div class="space-y-8 text-center md:text-left">
-                <h4 class="text-[11px] font-extrabold uppercase tracking-[0.3em] text-safety">The Mission</h4>
-                <p class="text-gray-500 text-xs leading-loose font-medium">
-                    Detecting the <i>latent conditions</i> of failure through shared intelligence and decade-spanning experience.
-                </p>
-            </div>
-        </div>
-        <div class="container mx-auto max-w-5xl pt-10 border-t border-white border-opacity-5 text-[11px] font-bold text-gray-600 uppercase tracking-[0.3em] text-center">
-            <p>&copy; 2026 G.S. ACHARYA | ALL RIGHTS RESERVED</p>
-        </div>
-    </footer>
+Subscribe
 
-    <script>
-        /**
-         * FULL ARTICLE HISTORY
-         * Replace 'LATEST-POST-URL-HERE' with your actual Beehiiv permalinks.
-         */
-        const articleArchive = [
-            {
-                id: 'p1',
-                title: 'The Swiss Cheese at LaGuardia',
-                date: 'March 31, 2026',
-                tagline: 'Why a fatal runway crash in NYC matters for the mountains of Nepal.',
-                link: 'LATEST-POST-URL-HERE'
-            },
-            {
-                id: 'p2',
-                title: 'The Challenger Legacy: Why "Tribal Knowledge" is Not a Safety Strategy',
-                date: 'March 17, 2026',
-                tagline: 'Informal wisdom is a gift; documented resilience is a requirement.',
-                link: 'LATEST-POST-URL-HERE'
-            },
-            {
-                id: 'p3',
-                title: 'The Human Factor of Your Inbox',
-                date: 'March 04, 2026',
-                tagline: 'A quick "systems update" from Ghanshyam Acharya.',
-                link: 'LATEST-POST-URL-HERE'
-            },
-            {
-                id: 'p4',
-                title: 'Tenerife: When the System Itself Failed',
-                date: 'March 03, 2026',
-                tagline: 'The deadliest accident in aviation was a systems failure.',
-                link: 'LATEST-POST-URL-HERE'
-            },
-            {
-                id: 'p5',
-                title: 'Welcome to The Safety Layer Post',
-                date: 'March 02, 2026',
-                tagline: 'A technical note on our mission and upcoming analytical frameworks.',
-                link: 'LATEST-POST-URL-HERE'
-            },
-            {
-                id: 'p6',
-                title: 'Welcome to The Safety Layer',
-                date: 'March 01, 2026',
-                tagline: 'The inaugural briefing from Ghanshyam Acharya.',
-                link: 'LATEST-POST-URL-HERE'
-            }
-        ];
+</a>
 
-        /**
-         * The engine that transforms the 'articleArchive' data into 
-         * visible HTML cards in the Analytical Log section.
-         */
-        function buildLog() {
-            const feed = document.getElementById('log-feed');
-            articleArchive.forEach((art, idx) => {
-                const card = document.createElement('div');
-                card.className = `article-card bg-white border border-gray-100 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm hover:shadow-md transition-shadow`;
-                card.innerHTML = `
-                    <div class="flex-grow text-left">
-                        <div class="flex items-center gap-3 mb-2">
-                            <span class="text-[9px] font-extrabold text-gray-400 uppercase tracking-widest">${art.date}</span>
-                            ${idx === 0 ? '<span class="text-[8px] bg-navy text-white px-2 py-0.5 rounded-full font-bold uppercase">Latest</span>' : ''}
-                        </div>
-                        <h4 class="text-xl md:text-2xl font-bold text-navy mb-2 leading-tight">${art.title}</h4>
-                        <p class="text-sm text-gray-500 font-serif italic">${art.tagline}</p>
-                    </div>
-                    <div class="shrink-0 w-full md:w-auto">
-                        <a href="${art.link}" target="_blank" class="flex items-center justify-center gap-2 bg-ice border border-gray-100 text-navy px-8 py-4 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-navy hover:text-white transition-all group w-full">
-                            Read Full Edition
-                            <span class="group-hover:translate-x-1 transition-transform">→</span>
-                        </a>
-                    </div>
-                `;
-                feed.appendChild(card);
-            });
-        }
+</nav>
 
-        function copyToClipboard(text) {
-            const el = document.createElement('textarea');
-            el.value = text;
-            document.body.appendChild(el);
-            el.select();
-            document.execCommand('copy');
-            document.body.removeChild(el);
-            
-            const msg = document.getElementById('copy-msg');
-            msg.style.opacity = '1';
-            setTimeout(() => msg.style.opacity = '0', 2000);
-        }
+<!-- HERO -->
+<header class="pt-20 pb-16 px-6 text-center max-w-4xl mx-auto border-b border-gray-50">
 
-        // Initialize the log on load
-        window.onload = () => {
-            buildLog();
-        };
-    </script>
+<div class="tsl-logo-container">
+<img src="/assets/tsllogo.png" alt="The Safety Layer Logo" class="tsl-logo-img">
+</div>
+
+<h1 class="text-4xl md:text-6xl font-extrabold mb-4 italic">
+The Safety Layer
+</h1>
+
+<h2 class="text-2xl md:text-4xl font-extrabold mb-8 uppercase">
+Understanding Aviation Safety Before Failure
+</h2>
+
+<p class="text-lg text-gray-500 max-w-2xl mx-auto mb-8">
+
+A chronological record of analytical case studies focusing on human performance, latent system conditions, and AI integration in aviation safety.
+
+</p>
+
+<a href="#archive-section"
+class="text-navy font-bold text-xs uppercase tracking-widest border-b-2 border-safety pb-1">
+
+Browse Article →
+
+</a>
+
+</header>
+
+<main class="max-w-4xl mx-auto px-4">
+
+<!-- ANALYTICAL LOG -->
+<section id="archive-section" class="py-20">
+
+<h3 class="text-xs font-bold uppercase tracking-widest text-safety mb-2">
+Latest Editions
+</h3>
+
+<h2 class="text-3xl font-extrabold text-navy mb-12">
+Analytical Log
+</h2>
+
+<div id="log-feed" class="grid gap-6"></div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact-section" class="py-32 border-t border-gray-100 text-center">
+
+<div class="max-w-2xl mx-auto">
+
+<h3 class="text-xs font-bold uppercase tracking-widest text-safety mb-6">
+Inquiry & Feedback
+</h3>
+
+<h2 class="text-4xl font-extrabold mb-8">
+Professional Consultation
+</h2>
+
+<p class="text-gray-500 italic mb-12">
+
+For aviation safety training, human factors workshops, or institutional collaboration submit your inquiry through the secure contact form.
+
+</p>
+
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+
+<a href="https://form.typeform.com/to/YOUR-FORM-ID"
+target="_blank"
+class="bg-navy text-white px-10 py-4 rounded-full font-bold uppercase text-xs">
+
+Open Contact Form
+
+</a>
+
+<button onclick="copyToClipboard('acharyajees@gmail.com')"
+class="border px-10 py-4 rounded-full font-bold uppercase text-xs">
+
+Copy Email
+
+</button>
+
+</div>
+
+<div id="copy-msg" class="mt-6 text-safety opacity-0">
+Email copied
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white py-16 text-center">
+
+<p class="mb-4">The Safety Layer</p>
+
+<a href="https://newsletter.gsacharya.com" class="text-safety">
+Newsletter Subscription
+</a>
+
+<p class="mt-8 text-gray-500 text-xs">
+© 2026 GS Acharya
+</p>
+
+</footer>
+
+<script>
+
+const articleArchive = [
+
+{
+title: "The Swiss Cheese at LaGuardia",
+date: "March 31, 2026",
+tagline: "Why a fatal runway crash in NYC matters for the mountains of Nepal",
+link: "https://newsletter.gsacharya.com/p/swiss-cheese-laguardia"
+},
+
+{
+title: "The Challenger Legacy",
+date: "March 17, 2026",
+tagline: "Why tribal knowledge is not a safety strategy",
+link: "#"
+},
+
+{
+title: "Human Factor of Your Inbox",
+date: "March 4, 2026",
+tagline: "A systems update from GS Acharya",
+link: "#"
+}
+
+];
+
+function buildLog() {
+
+const feed = document.getElementById('log-feed');
+
+articleArchive.forEach((art, idx) => {
+
+const card = document.createElement('div');
+
+card.className = "article-card border p-6 rounded-xl flex justify-between";
+
+card.innerHTML = `
+
+<div>
+<p class="text-xs text-gray-400">${art.date}</p>
+<h4 class="text-xl font-bold">${art.title}</h4>
+<p class="text-gray-500">${art.tagline}</p>
+</div>
+
+<a href="${art.link}" target="_blank"
+class="text-navy font-bold">
+
+Read →
+
+</a>
+`;
+
+feed.appendChild(card);
+
+});
+
+}
+
+function copyToClipboard(text) {
+
+navigator.clipboard.writeText(text);
+
+const msg = document.getElementById('copy-msg');
+
+msg.style.opacity = "1";
+
+setTimeout(() => msg.style.opacity = "0", 2000);
+
+}
+
+window.onload = buildLog;
+
+</script>
+
 </body>
 </html>
