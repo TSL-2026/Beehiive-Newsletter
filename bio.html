@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About GS Acharya | The Safety Layer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { navy: '#1B263B', safety: '#F4A261', dark: '#111827', ice: '#F9FAFB' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Lora', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .social-link {
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #F9FAFB;
+            border: 1px solid #E5E7EB;
+        }
+        .social-link:hover {
+            border-color: #1B263B;
+            background: #1B263B;
+            color: white !important;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body class="bg-white text-dark antialiased font-sans">
+    <nav class="py-6 px-8 flex justify-between items-center border-b border-gray-100 sticky top-0 bg-white bg-opacity-95 backdrop-blur-sm z-50">
+        <a href="index.html" class="flex items-center gap-2 font-bold text-navy tracking-tight">
+            <span>🛡️</span> The Safety Layer
+        </a>
+        <a href="index.html" class="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-navy">Back to Hub</a>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-6 py-20">
+        <header class="text-center mb-16">
+            <div class="w-24 h-24 bg-navy rounded-2xl mx-auto mb-6 flex items-center justify-center text-white text-4xl font-bold shadow-2xl transform rotate-3">GSA</div>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-3">Ghanshyam Acharya</h1>
+            <p class="text-safety font-bold text-sm uppercase tracking-[0.3em]">Chief Executive Officer & Safety Analyst</p>
+        </header>
+
+        <section class="prose prose-slate max-w-none font-serif text-lg leading-relaxed text-gray-700 space-y-10">
+            <div>
+                <h2 class="font-sans font-extrabold text-navy text-xl uppercase tracking-widest mb-4 italic">The Aviation Journey (1977 – Present)</h2>
+                <p>
+                    Safety in aviation is a dynamic discipline that requires constant vigilance and institutional memory. My career began in <span class="text-navy font-bold">1977</span> within the Department of Civil Aviation, managing high-altitude airports like Tumlingtar, Baglung, and Dang. This foundational experience in operational control during the analogue era has informed my current perspective on high-tech safety systems.
+                </p>
+            </div>
+            
+            <div>
+                <h2 class="font-sans font-extrabold text-navy text-xl uppercase tracking-widest mb-4 italic">Executive Leadership</h2>
+                <p>
+                    Currently serving as the <span class="text-navy font-bold">Chief Executive Officer</span> and Accountable Manager under the CAAN AOCR, I hold overall responsibility for the effective implementation of Safety Management Systems (SMS). My leadership across various airlines—from Buddha Air and Guna Airlines to Sita Air—has focused on the critical intersection of operational control, resource management, and regulatory compliance.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="font-sans font-extrabold text-navy text-xl uppercase tracking-widest mb-4 italic">Human Factors & The AI Horizon</h2>
+                <p>
+                    As a dedicated <span class="text-navy font-bold">Human Factors Instructor</span>, I specialize in identifying the latent conditions that lead to system failure. I am an aspirant data analyst and a vocal advocate for integrating <span class="text-safety font-bold">Artificial Intelligence</span> into aviation education. By leveraging AI, we can reduce the learning curve for crews and detect weak signals in flight data long before they manifest as reports.
+                </p>
+            </div>
+
+            <blockquote class="border-l-4 border-safety pl-8 italic text-gray-500 my-16 text-xl">
+                "Safety is the presence of capacity, not just the absence of accidents. We examine the latent conditions of the system today to protect the flights of tomorrow."
+            </blockquote>
+        </section>
+
+        <!-- GET IN TOUCH -->
+        <div class="mt-24 pt-12 border-t border-gray-100 text-center">
+            <h3 class="font-sans font-extrabold text-navy text-sm uppercase tracking-[0.2em] mb-8">Get In Touch</h3>
+            <div class="flex justify-center gap-6">
+                <a href="https://linkedin.com/in/ghanshyamacharya/" target="_blank" class="social-link text-navy" title="LinkedIn">
+                    <span class="font-bold">in</span>
+                </a>
+                <a href="https://x.com/G_S_Acharya" target="_blank" class="social-link text-navy" title="X (Twitter)">
+                    <span class="font-bold">𝕏</span>
+                </a>
+                <a href="mailto:acharyajees@gmail.com" class="social-link text-navy" title="Email">
+                    <span class="text-xl">✉</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-16 text-center border-t border-gray-50">
+        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">The Project of GS Acharya</p>
+        <p class="text-[10px] font-bold text-gray-300 uppercase tracking-widest italic">&copy; 2026 | Kathmandu, Nepal</p>
+    </footer>
+</body>
+</html>
