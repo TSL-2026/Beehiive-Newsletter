@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Swiss Cheese at LaGuardia | Aviation Safety Analysis</title>
+  <meta name="description" content="An analysis of the LaGuardia runway collision, the failure of ASDE-X systems, and the integration of VR training in Nepal's aviation sector.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1B263B',
+            safety: '#F4A261',
+            dark: '#111827',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Lora', 'serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body { background-color: #F9FAFB; color: #111827; }
+    .prose-serif { font-family: 'Lora', serif; }
+    .safety-takeaway { 
+      background: #FFF7ED; 
+      border-left: 4px solid #F4A261; 
+      padding: 1.5rem; 
+      margin: 2.5rem 0; 
+      border-radius: 0 8px 8px 0;
+    }
+    .article-image {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      margin: 2rem 0;
+    }
+    #site-header { min-height: 80px; }
+  </style>
+</head>
+<body class="font-sans antialiased">
+
+  <div id="site-header"></div>
+
+  <main class="max-w-3xl mx-auto px-6 py-16">
+    
+    <header class="mb-12">
+      <p class="text-xs font-bold uppercase tracking-widest text-safety mb-3">Analytical Log · March 31, 2026</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-navy leading-tight mb-6">
+        The Swiss Cheese at LaGuardia: When Systems Gallop Toward Failure
+      </h1>
+      <p class="text-xl text-gray-500 italic prose-serif">
+        "Safety isn't a destination; it's a constant battle against entropy."
+      </p>
+    </header>
+
+    <div class="text-gray-700 leading-relaxed prose-serif text-lg">
+      <p class="mb-6">
+        If you’ve spent any time in a cockpit or a boardroom, you know the <strong>Swiss Cheese Model</strong>. We rely on those layers of defense to keep the holes from aligning. But every once in a while, the holes don't just align—they practically gallop toward each other.
+      </p>
+
+      <h2 class="text-2xl font-bold font-sans text-navy mt-12 mb-4 uppercase tracking-tight">1. The LaGuardia Collision: A System Failure</h2>
+      
+      <img src="/assets/laguardia-monitor.avif" alt="LGA ASDE-X Surface Surveillance Monitor Rendering" class="article-image">
+      
+      <p class="mb-6">
+        On March 22, an Air Canada Express CRJ900 landing at LaGuardia collided with an airport fire truck on the runway. Tragically, both pilots were killed. The ASDE-X (Surface Detection) system, designed specifically to alert controllers of ground conflicts, failed to trigger. This is a chilling reminder that "safety nets" are only as good as their last software update or sensor check.
+      </p>
+      
+      <div class="safety-takeaway font-sans">
+        <span class="block font-bold text-safety uppercase tracking-widest text-xs mb-2">🧠 Safety Takeaway</span>
+        Never assume the runway is clear just because the lights are green and the radio is quiet; tech-dependency can be a fatal trap.
+      </div>
+
+      <h2 class="text-2xl font-bold font-sans text-navy mt-12 mb-4 uppercase tracking-tight">2. Nepal’s "Safety First" VR Roadshow</h2>
+      
+      <img src="/assets/nepal-vr-training.avif" alt="Pilot wearing VR headset in an H125 simulator with Himalayas background" class="article-image">
+      
+      <p class="mb-6">
+        Airbus and Loft Dynamics just wrapped up a month-long roadshow in Nepal, training 30 pilots from all 13 domestic H125 operators using a Virtual Reality (VR) simulator. In our terrain, "learning by doing" in a real helicopter is high-risk and expensive. VR allows pilots to fail at 12,000 feet, experience a Governor Failure, or hit a microburst—all without risking a single blade.
+      </p>
+      
+      <div class="safety-takeaway font-sans">
+        <span class="block font-bold text-safety uppercase tracking-widest text-xs mb-2">🧠 Safety Takeaway</span>
+        AI and VR aren't just gadgets; they are the fastest way to compress 20 years of "mountain instinct" into 20 hours of training.
+      </div>
+
+      <h2 class="text-2xl font-bold font-sans text-navy mt-12 mb-4 uppercase tracking-tight">3. ICAO Updates Annex 13: The Independence Move</h2>
+      
+      <img src="/assets/icao-annex-13.avif" alt="Gavel resting on ICAO Annex 13 Aircraft Accident Investigation document" class="article-image">
+      
+      <p class="mb-6">
+        On March 27, ICAO adopted landmark changes to Annex 13 to ensure accident investigations aren't "halted or compromised" by political conflicts of interest. For too long, countries have had the power to "bury" findings. These new standards give investigators more teeth and faster access to evidence.
+      </p>
+      
+      <div class="safety-takeaway font-sans">
+        <span class="block font-bold text-safety uppercase tracking-widest text-xs mb-2">🧠 Safety Takeaway</span>
+        Safety data belongs to the industry, not the politicians; transparency is the only way to prevent the next crash.
+      </div>
+
+      <hr class="my-12 border-gray-200">
+
+      <h3 class="text-xl font-bold font-sans text-navy mb-4 uppercase tracking-widest">Quick Hits</h3>
+      <ul class="list-disc pl-6 space-y-4 mb-12 text-base">
+        <li><strong>FAA Warning:</strong> Over 150 US airport "hot spots" identified; runway incursions are trending up globally.</li>
+        <li><strong>Battery Alert:</strong> New ICAO power bank restrictions issued to mitigate lithium-ion fire risks in the cabin.</li>
+        <li><strong>EASA Update:</strong> Conflict zone warnings extended for Middle Eastern airspace through April 10.</li>
+      </ul>
+
+      <p class="text-gray-500 italic border-t pt-8">
+        <strong>The Last Word:</strong> Whether it's a fire truck in New York or a downdraft in Lukla, the variables change, but the solution remains the same: Human Performance. Technology like VR helps us train for the "what," but a "Just Culture" determines the "why."
+      </p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script>
+    async function loadLayout() {
+      try {
+        const [headerRes, footerRes] = await Promise.all([
+          fetch('/assets/header.html'),
+          fetch('/assets/footer.html')
+        ]);
+        
+        if (headerRes.ok) document.getElementById('site-header').innerHTML = await headerRes.text();
+        if (footerRes.ok) document.getElementById('site-footer').innerHTML = await footerRes.text();
+      } catch (err) {
+        console.error("Layout load failed:", err);
+      }
+    }
+    window.addEventListener('DOMContentLoaded', loadLayout);
+  </script>
+
+</body>
+</html>
