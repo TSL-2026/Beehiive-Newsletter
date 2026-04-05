@@ -205,6 +205,20 @@
         </article>
       </section>
     </section>
+    <div id="site-header"></div>
+<div id="site-footer"></div>
+
+<script>
+  async function loadLayout() {
+    // Note: If using Vercel, absolute paths starting with '/' work well.
+    const header = await fetch('/assets/header.html').then(res => res.text());
+    const footer = await fetch('/assets/footer.html').then(res => res.text());
+    
+    document.getElementById('site-header').innerHTML = header;
+    document.getElementById('site-footer').innerHTML = footer;
+  }
+  loadLayout();
+</script>
   </main>
 </body>
 </html>
