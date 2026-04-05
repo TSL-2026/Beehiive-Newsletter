@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Eight Safety Layers</title>
+  <style>
+    :root {
+      --page-blue: #4d84c4;
+      --panel-bg: #d7dbe4;
+      --card-border: rgba(255,255,255,0.55);
+      --text-dark: #24385d;
+      --text-muted: #7f8da7;
+      --rule-blue: #2f63b3;
+      --icon-bg: #eef1f6;
+      --icon-fg: #8a97b2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--page-blue);
+      color: var(--text-dark);
+      min-height: 100vh;
+    }
+
+    .wrap {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 56px 28px 72px;
+    }
+
+    .panel {
+      background: var(--panel-bg);
+      border-radius: 2px;
+      padding: 44px 42px 54px;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.05) inset;
+    }
+
+    h1 {
+      margin: 0;
+      text-align: center;
+      font-size: clamp(2.2rem, 3vw, 3.5rem);
+      line-height: 1.15;
+      color: var(--text-dark);
+      font-weight: 700;
+    }
+
+    .intro {
+      max-width: 980px;
+      margin: 22px auto 0;
+      text-align: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: clamp(1.05rem, 1.65vw, 1.55rem);
+      line-height: 1.45;
+      color: var(--text-dark);
+    }
+
+    .rule {
+      height: 4px;
+      background: var(--rule-blue);
+      margin: 28px 0 38px;
+      border: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 54px 36px;
+    }
+
+    .card {
+      min-height: 270px;
+      border: 6px solid var(--card-border);
+      background: rgba(255,255,255,0.08);
+      padding: 18px 22px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+    }
+
+    .icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+      background: var(--icon-bg);
+      color: var(--icon-fg);
+      font-size: 2rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 700;
+    }
+
+    .card h2 {
+      margin: 0 0 14px;
+      color: var(--text-dark);
+      font-family: "Courier New", Courier, monospace;
+      font-size: clamp(1.45rem, 1.8vw, 2.05rem);
+      line-height: 1.3;
+      letter-spacing: 0.03em;
+      font-weight: 500;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: clamp(1rem, 1.15vw, 1.22rem);
+      line-height: 1.65;
+    }
+
+    @media (max-width: 1150px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .wrap {
+        padding: 24px 14px 36px;
+      }
+
+      .panel {
+        padding: 28px 18px 34px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .card {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="panel" aria-labelledby="title">
+      <h1 id="title">The Eight Safety Layers</h1>
+
+      <div class="intro">
+        Aviation safety is not linear. It is layered.<br />
+        Each layer serves as a performance-controlled defence.<br />
+        When monitoring, adaptation, or insulation fails across layers, risk accumulates.
+      </div>
+
+      <hr class="rule" />
+
+      <section class="grid" aria-label="Eight safety layers">
+        <article class="card">
+          <div class="icon" aria-hidden="true">◔</div>
+          <h2>Human Factors</h2>
+          <p>Cognition, authority gradients, workload, and communication under operational pressure.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">📖</div>
+          <h2>Training &amp;<br />Competency</h2>
+          <p>Technical proficiency and non-technical skills shaped by structured learning systems.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">⚙</div>
+          <h2>SOP &amp; Operational<br />Design</h2>
+          <p>Procedure clarity, checklist architecture, and phraseology precision.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">↯</div>
+          <h2>Maintenance &amp;<br />Engineering</h2>
+          <p>Mechanical integrity and infrastructure resilience under normal and surge conditions.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">◜</div>
+          <h2>Organizational<br />Leadership</h2>
+          <p>Governance structures, safety culture, and operational decision architecture.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">◷</div>
+          <h2>Safety Assurance</h2>
+          <p>Safety Assurance functions as the monitoring and performance verification mechanism acting across the system.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">Q</div>
+          <h2>Regulatory<br />Oversight</h2>
+          <p>Standardisation, harmonisation, and supervisory architecture.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">▭</div>
+          <h2>Technology &amp; Design</h2>
+          <p>Surveillance systems, automation logic, and redundancy layers.</p>
+        </article>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
