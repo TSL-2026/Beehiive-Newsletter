@@ -63,6 +63,8 @@
       border-color: #1B263B;
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
     }
+    
+    #site-header { min-height: 80px; }
   </style>
 </head>
 
@@ -107,15 +109,13 @@
         <p class="text-xs text-gray-400 mb-2">March 31, 2026</p>
         <h4 class="text-2xl font-extrabold text-navy mb-3">The Swiss Cheese at LaGuardia</h4>
         <p class="text-gray-500 leading-relaxed mb-6">
-          On February 6, 2025, a Delta regional jet and an American Airlines aircraft collided on a runway at LaGuardia Airport. Seventeen people were injured. The investigation is ongoing — but the causal chain is already familiar: multiple small failures aligning in sequence. This edition examines how James Reason's Swiss Cheese Model applies here, and why the same latent conditions exist in Nepal's high-altitude operations where margin for error is even thinner.
+          On March 22, an Air Canada Express CRJ900 landing at LaGuardia collided with an airport fire truck. While safety nets like ASDE-X should have prevented this, the system failed. This edition examines the causal chain at LGA and why the same latent conditions exist in Nepal's high-altitude operations where margins are even thinner.
         </p>
         <a
-          href="https://newsletter.gsacharya.com/archive"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-navy font-bold text-sm uppercase tracking-widest border-b-2 border-safety pb-1"
+          href="/docs/safety/the-swiss-cheese-at-laguardia.html"
+          class="text-navy font-bold text-sm uppercase tracking-widest border-b-2 border-safety pb-1 hover:text-safety transition-colors"
         >
-          Browse Archive →
+          Read More →
         </a>
       </div>
     </section>
@@ -151,13 +151,11 @@
   <script>
     async function loadLayout() {
       try {
-        // Fetch both components simultaneously
         const [headerRes, footerRes] = await Promise.all([
           fetch('/assets/header.html'),
           fetch('/assets/footer.html')
         ]);
         
-        // Inject content into placeholders
         if (headerRes.ok) {
           document.getElementById('site-header').innerHTML = await headerRes.text();
         }
@@ -169,7 +167,6 @@
       }
     }
     
-    // Execute on page load
     window.addEventListener('DOMContentLoaded', loadLayout);
   </script>
 </body>
